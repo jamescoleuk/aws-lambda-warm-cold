@@ -1,6 +1,7 @@
 use lambda_http::{service_fn, Error, IntoResponse, Request};
 use uuid::Uuid;
 
+/// This is the lambda entry point, and all initialisation happens here.
 #[tokio::main]
 async fn main() -> Result<(), Error> {
     // Put things you don't want to do frequently here. E.g.:
@@ -18,6 +19,8 @@ async fn main() -> Result<(), Error> {
     Ok(())
 }
 
+/// This is the handler code. You might consider moving code from here to
+/// the initialisation step.
 pub async fn execute(_: Request, id: Uuid) -> Result<impl IntoResponse, std::convert::Infallible> {
     // Put your core logic in here.
 
