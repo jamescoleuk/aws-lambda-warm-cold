@@ -29,5 +29,5 @@ pub async fn execute(_: Request, id: Uuid) -> Result<impl IntoResponse, std::con
     );
     println!();
 
-    Ok("Hello hot/cold world!".to_string())
+    Ok("Hello warm/cold world!".to_string())
 }
