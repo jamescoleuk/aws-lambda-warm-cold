@@ -1,4 +1,5 @@
 # aws-lambda-warm-cold
+This repo shows you how to take advantage of warm/cold code in Rust lambdas.
 
 After AWS runs a lambda it keeps it "warm" for a while. If the lambda is invoked before that while is up then it runs faster.
 
