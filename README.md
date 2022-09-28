@@ -5,12 +5,11 @@ After AWS runs a lambda it keeps it "warm" for a while. If the lambda is invoked
 
 ![Dory from the film Finding Nemo saying "I should save my money, oh look shiny things!"]( save_money.jpg )
 
-There are several steps in AWS running a lambda, e.g. downloading your code, provisioning the execution environment, running the initialisation code, and finally running the handler code.
+There are several steps in AWS running a lambda, e.g. downloading your code, provisioning the execution environment, running the initialisation code, and finally running the handler code. AWS have an [excellent overview](https://aws.amazon.com/blogs/compute/operating-lambda-performance-optimization-part-1/) of all this.
 
 This repo is concerned with the initialisation code and the handler code, and how these run in rust and how you can make use of this. It's not complicated but as of 2022-09-28 it's also not clear in existing documentation and blogs. And where warm/cold execution is mentioned it's not clear how to get references from the initialization code to the handler code.
 
 See [main.rs](https://github.com/jamescoleuk/aws-lambda-warm-cold/blob/main/src/main.rs) for how to do this.
-
 
 
 ## Running this locally
