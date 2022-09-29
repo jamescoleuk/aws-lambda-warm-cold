@@ -14,6 +14,8 @@ async fn main() -> Result<(), Error> {
     println!("Initialization: this only runs on a cold start.");
     println!();
 
+    // You can pass references from the initialization function to the 
+    // handling function via a closure.
     let id = Uuid::new_v4();
     lambda_http::run(service_fn(|event| execute(event, id))).await?;
     Ok(())
